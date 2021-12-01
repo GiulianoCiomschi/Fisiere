@@ -1,0 +1,22 @@
+f=open('doc.txt', 'w')
+t=input('Scrieti textul fisierului: ')
+f.write(t)
+f.close() 
+
+f=open('doc.txt', 'r')
+n=f.read()
+Vocale=[]
+Nr_vocale=0
+for i in n: 
+    if (i=='A') or (i=='a') or (i=='E') or(i=='e') or (i=='I') or (i=='i') or (i=='O') or (i=='o') or (i=='U') or(i=='u'): 
+            Vocale+=i 
+            Nr_vocale+=1
+f.close()
+
+f=open('Vocale.txt', 'a')
+f.write(str(Vocale))
+f.write('\n')
+
+f.write('Numarul de vocale este:')
+f.write(str(Nr_vocale))
+f.close()
